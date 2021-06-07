@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: navy;
+  color: #133a87;
   text-decoration: none;
 }
 
@@ -16,27 +16,32 @@ a {
   padding: 50px;
   width: 100%;
   max-width: 90vw;
+  font-size: 1.5em;
 }
 
 .wrapper p {
   margin: 15px;
   white-space: nowrap;
   overflow: auto;
-  animation: type 1.4s steps(15, end);
+  animation: type 1s steps(15, end);
 }
 .wrapper p:nth-child(2) {
-  animation: type2 4.3s steps(29, end);
+  animation: type2 3s steps(29, end);
 }
 .wrapper p:nth-child(3) {
-  animation: type3 7.4s steps(31, end);
+  animation: type3 5s steps(31, end);
 }
 .wrapper p:nth-child(4) {
-  animation: type4 14s steps(65, end);
+  animation: type4 10s steps(65, end);
 }
 
-.wrapper p span {
+.emoji {
+  font-size: 0.7em;
+}
+
+.cursor {
   animation: blink 1s infinite;
-  color: navy;
+  color: #133a87;
 }
 
 .media-refs {
@@ -53,16 +58,16 @@ a {
   margin: 20px;
 }
 
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .wrapper p {
-    font-size: 2em;
-  }
-}
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .wrapper p {
-    font-size: 1.5em;
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
   }
 }
 
@@ -127,6 +132,11 @@ a {
   }
 }
 
+@page {
+  size: letter landscape;
+}
+
 ::selection {
-  background: black;
+  background: #133a87;
+  color: white;
 }
