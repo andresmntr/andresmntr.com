@@ -1,0 +1,129 @@
+html,
+body {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  font-family: "Courier";
+}
+
+a {
+  color: navy;
+  text-decoration: none;
+}
+
+.wrapper {
+  padding: 50px;
+  width: 100%;
+  max-width: 90vw;
+}
+
+.wrapper p {
+  margin: 15px;
+  white-space: nowrap;
+  overflow: auto;
+  animation: type 1.4s steps(15, end);
+}
+.wrapper p:nth-child(2) {
+  animation: type2 4.3s steps(29, end);
+}
+.wrapper p:nth-child(3) {
+  animation: type3 7.4s steps(31, end);
+}
+.wrapper p:nth-child(4) {
+  animation: type4 14s steps(65, end);
+}
+
+.wrapper p span {
+  animation: blink 1s infinite;
+  color: navy;
+}
+
+.media-refs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  animation: fadeIn 15s;
+  position: absolute;
+  bottom: 50px;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .wrapper p {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .wrapper p {
+    font-size: 1.5em;
+  }
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 14ch;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  33% {
+    width: 0;
+  }
+  100% {
+    width: 29ch;
+  }
+}
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  58% {
+    width: 0;
+  }
+  100% {
+    width: 31ch;
+  }
+}
+@keyframes type4 {
+  0% {
+    width: 0;
+  }
+  53% {
+    width: 0;
+  }
+  100% {
+    width: 65ch;
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+::selection {
+  background: black;
+}
