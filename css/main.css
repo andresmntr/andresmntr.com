@@ -22,7 +22,7 @@ a {
 .wrapper p {
   margin: 15px;
   white-space: nowrap;
-  overflow: auto;
+  overflow: hidden;
   animation: type 1s steps(15, end);
 }
 .wrapper p:nth-child(2) {
@@ -32,7 +32,10 @@ a {
   animation: type3 5s steps(31, end);
 }
 .wrapper p:nth-child(4) {
-  animation: type4 10s steps(65, end);
+  animation: type4 7s steps(30, end);
+}
+.wrapper p:nth-child(5) {
+  animation: type5 9s steps(34, end);
 }
 
 .emoji {
@@ -56,19 +59,6 @@ a {
 }
 .media-refs a {
   margin: 20px;
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    height: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
 }
 
 @keyframes type {
@@ -106,11 +96,22 @@ a {
   0% {
     width: 0;
   }
-  53% {
+  70% {
     width: 0;
   }
   100% {
-    width: 65ch;
+    width: 30ch;
+  }
+}
+@keyframes type5 {
+  0% {
+    width: 0;
+  }
+  78% {
+    width: 0;
+  }
+  100% {
+    width: 34ch;
   }
 }
 
